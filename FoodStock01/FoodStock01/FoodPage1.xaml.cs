@@ -29,7 +29,9 @@ namespace FoodStock01
 
                 InitializeComponent();
 
-                DisplayAlert("期限通知", "期限が近づいている食材があります", "OK");//試し
+                DependencyService.Get<INotificationService>().On("タイトルテスト", "スブタイトル", "本文テスト");
+
+                //DisplayAlert("期限通知", "期限が近づいている食材があります", "OK");//試し
             }
             else
             {
@@ -38,7 +40,7 @@ namespace FoodStock01
 
                 InitializeComponent();
 
-                DisplayAlert("試しのアラート", "とりあえず通知", "OK");//試し
+                //DisplayAlert("試しのアラート", "とりあえず通知", "OK");//試し
             }
         }
 
