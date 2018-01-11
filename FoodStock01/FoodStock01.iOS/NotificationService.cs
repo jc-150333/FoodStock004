@@ -54,7 +54,7 @@ namespace FoodStock01.iOS
                 //components.Hour = _notifyDate.LocalDateTime.Hour;
                 components.Hour = 11;
                 //components.Minute = _notifyDate.LocalDateTime.Minute;
-                components.Minute = 10;
+                components.Minute = 25;
                 //components.Minute = ;
                 components.Second = 0;
                 var calendarTrigger = UNCalendarNotificationTrigger.CreateTrigger(components, false);
