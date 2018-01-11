@@ -18,7 +18,7 @@ namespace FoodStock01
             //AppのdbPathに引数のパスを設定
             App.dbPath = dbPath;
 
-            DependencyService.Get<INotificationService>().return0();
+            //DependencyService.Get<INotificationService>().return0();
 
             // TabbedPageをMainPageとしてセットする
             MainPage = new TabbedPage()

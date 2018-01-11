@@ -61,21 +61,23 @@ namespace FoodStock01.iOS
 
                 var requestID = "notifyKey";
                 content.UserInfo = NSDictionary.FromObjectAndKey(new NSString("notifyValue"), new NSString("notifyKey"));
-                var request = UNNotificationRequest.FromIdentifier(requestID, content, trigger);
+                //var request = UNNotificationRequest.FromIdentifier(requestID, content, trigger);
 
-                //var request = UNNotificationRequest.FromIdentifier(requestID, content, calendarTrigger);
+                var request = UNNotificationRequest.FromIdentifier(requestID, content, calendarTrigger);
 
                 UNUserNotificationCenter.Current.Delegate = new LocalNotificationCenterDelegate();
 
                 //ローカル通知を予約する
                 UNUserNotificationCenter.Current.AddNotificationRequest(request, (err) =>
                 {
+                    UIApplication.SharedApplication.ApplicationIconBadgeNumber += 1; //アイコン上に表示するバッジの数値
+
                     if (err != null)
                     {
                         //LogUtility.OutPutError(err.LocalizedFailureReason + System.Environment.NewLine + err.LocalizedDescription);
                     }
                 });
-                UIApplication.SharedApplication.ApplicationIconBadgeNumber += 1; //アイコン上に表示するバッジの数値
+                //UIApplication.SharedApplication.ApplicationIconBadgeNumber += 1; //アイコン上に表示するバッジの数値
             });
         }
 
