@@ -17,6 +17,11 @@ namespace FoodStock01
 
         public FoodPage1(string title)
         {
+            //通知
+            DependencyService.Get<INotificationService>().Regist();
+
+            DependencyService.Get<INotificationService>().return0();
+
             if (FoodModel.SelectFood02() != null)
             {
                 //タイトル
@@ -35,6 +40,11 @@ namespace FoodStock01
 
                 DisplayAlert("試しのアラート", "とりあえず通知", "OK");//試し
             }
+        }
+
+        void OnNotificationClick(object sender, EventArgs e)
+        {
+            DependencyService.Get<INotificationService>().On("タイトルテスト", "スブタイトル", "本文テスト");
         }
 
         void ChackBoxChanged(object sender, bool isChecked)
