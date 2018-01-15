@@ -6,7 +6,7 @@
         void Regist();
 
         //通知する
-        void On(string title, string subTitle, string body);
+        //void On(string title, string subTitle, string body);
 
         void On(string title, string subTitle, string body,int p_hour,int p_minute);
 
