@@ -16,9 +16,13 @@ namespace FoodStock01
 
         int select_max;
 
-        DateTime p_hour;
+        DateTime p_hour = new DateTime(DateTime.Now.Hour);
 
-        DateTime p_minute;
+        DateTime p_minute = new DateTime(DateTime.Now.Minute);
+
+        int hour = 1;
+
+        int minute = 1;
 
         public SettingPage(string title)
         {
@@ -77,9 +81,15 @@ namespace FoodStock01
 
         private void Time_Button_Clicked(object sender, EventArgs e)
         {
-            p_hour = new DateTime(TPicker.Time.Hours);
+            //p_hour = new DateTime(TPicker.Time.Hours);
 
-            p_minute = new DateTime(TPicker.Time.Minutes);
+            //p_hour = new DateTime(TPicker.Time.Hours);
+            
+
+            hour = TPicker.Time.Hours;
+
+            minute = TPicker.Time.Minutes;
+            //p_minute = new DateTime(TPicker.Time.Minutes);
 
             string d = p_hour.ToString();
 
