@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using FoodStock01;
 using System.Windows.Input;
+using System.Collections.Generic;
 
 namespace FoodStock01
 {
@@ -29,7 +30,7 @@ namespace FoodStock01
 
                 InitializeComponent();
 
-                DependencyService.Get<INotificationService>().On("タイトルテスト", "スブタイトル", "本文テスト");
+                //DependencyService.Get<INotificationService>().On("タイトルテスト", "スブタイトル", "本文テスト");
 
                 //DisplayAlert("期限通知", "期限が近づいている食材があります", "OK");//試し
             }
@@ -46,7 +47,10 @@ namespace FoodStock01
 
         void OnNotificationClick(object sender, EventArgs e)
         {
-            DependencyService.Get<INotificationService>().On("タイトルテスト", "スブタイトル", "本文テスト");
+            int Hour = TimeModel.SelectHour();
+            int Minute = TimeModel.SelectMinute();
+
+            DependencyService.Get<INotificationService>().On("タイトルテスト", "スブタイトル", "本文テスト",Hour,Minute);
         }
 
         void ChackBoxChanged(object sender, bool isChecked)

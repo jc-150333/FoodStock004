@@ -33,7 +33,7 @@ namespace FoodStock01.iOS
             });
             //}
         }
-        public void On(string title, string subtitle, string body)
+        public void On(string title, string subtitle, string body,int p_hour,int p_minute)
         {
             UIApplication.SharedApplication.InvokeOnMainThread(delegate
             {
@@ -52,9 +52,9 @@ namespace FoodStock01.iOS
                 components.Month = DateTime.Now.Month;
                 components.Day = DateTime.Now.Day;
                 //components.Hour = _notifyDate.LocalDateTime.Hour;
-                components.Hour = 11;
+                components.Hour = p_hour;
                 //components.Minute = _notifyDate.LocalDateTime.Minute;
-                components.Minute = 35;
+                components.Minute = p_minute;
                 //components.Minute = ;
                 components.Second = 0;
                 var calendarTrigger = UNCalendarNotificationTrigger.CreateTrigger(components, false);
@@ -70,14 +70,14 @@ namespace FoodStock01.iOS
                 //ローカル通知を予約する
                 UNUserNotificationCenter.Current.AddNotificationRequest(request, (err) =>
                 {
-                    UIApplication.SharedApplication.ApplicationIconBadgeNumber += 1; //アイコン上に表示するバッジの数値
+                    //UIApplication.SharedApplication.ApplicationIconBadgeNumber += 1; //アイコン上に表示するバッジの数値
 
                     if (err != null)
                     {
                         //LogUtility.OutPutError(err.LocalizedFailureReason + System.Environment.NewLine + err.LocalizedDescription);
                     }
                 });
-                //UIApplication.SharedApplication.ApplicationIconBadgeNumber += 1; //アイコン上に表示するバッジの数値
+                UIApplication.SharedApplication.ApplicationIconBadgeNumber += 1; //アイコン上に表示するバッジの数値
             });
         }
 
