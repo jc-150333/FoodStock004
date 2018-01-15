@@ -85,9 +85,9 @@ namespace FoodStock01
 
             string d2 = p_minute.ToString();
 
-            //int d3 = int.Parse(d);
+            int d3 = int.Parse(d);
 
-            //int d4 = int.Parse(d2);
+            int d4 = int.Parse(d2);
 
             //TimeModel.UpdateTime(d3,d4);
         }
