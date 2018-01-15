@@ -81,15 +81,15 @@ namespace FoodStock01
 
             p_minute = new DateTime(TPicker.Time.Minutes);
 
-            string d = p_hour.ToString();
+            //string d = p_hour.ToString();
 
-            string d2 = p_minute.ToString();
+            //string d2 = p_minute.ToString();
 
-            int d3 = int.Parse(d);
+            //int d3 = int.Parse(d);
 
-            int d4 = int.Parse(d2);
+            //int d4 = int.Parse(d2);
 
-            TimeModel.UpdateTime(d3,d4);
+            //TimeModel.UpdateTime(d3,d4);
         }
     }
 }
