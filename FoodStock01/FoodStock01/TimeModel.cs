@@ -20,10 +20,10 @@ namespace FoodStock01
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
-                //try
-                //{
+                try
+                {
                     /**********試し*************/
-                    List<TimeModel> SetList = db.Query<TimeModel>("SELECT [P_hour] FROM [Time]"); ;
+                    //List<TimeModel> SetList = db.Query<TimeModel>("SELECT [P_hour] FROM [Time]"); ;
 
                     int[] SetArray = new int[100];
 
@@ -31,25 +31,27 @@ namespace FoodStock01
 
                     int i = 0;
 
-                    foreach (TimeModel stm in SetList)
-                    {
-                        //SetArray[i++] = stm.Set_alert;
-                        SetArray[i] = stm.P_hour;
-                        i++;
-                    }
+                    //foreach (TimeModel stm in SetList)
+                    //{
+                    //    //SetArray[i++] = stm.Set_alert;
+                    //    SetArray[i] = stm.P_hour;
+                    //    i++;
+                    //}
+
+                    SetArray[0] = 1;
 
                     alert = SetArray[0];
 
                     //データベースに指定したSQLを発行
                     return alert;
 
-               // }
-               // catch (Exception e)
-               // {
+                }
+                catch (Exception e)
+                {
 
-                   // System.Diagnostics.Debug.WriteLine(e);
-                   // return 999;
-               // }
+                    System.Diagnostics.Debug.WriteLine(e);
+                    return 999;
+                }
             }
         }
 
