@@ -20,6 +20,8 @@ namespace FoodStock01
 
         DateTime p_minute = new DateTime(DateTime.Now.Minute);
 
+        TimeSpan sp;
+
         int hour = 1;
 
         int minute = 1;
@@ -83,19 +85,24 @@ namespace FoodStock01
         {
             //p_hour = new DateTime(TPicker.Time.Hours);
 
-            //p_hour = new DateTime(TPicker.Time.Hours);
-            
+            sp = TPicker.Time;
 
             hour = TPicker.Time.Hours;
 
-            minute = TPicker.Time.Minutes;
+            //hour = TPicker.Time.Hours;
+
+            //minute = TPicker.Time.Minutes;
             //p_minute = new DateTime(TPicker.Time.Minutes);
+
+            string spd = sp.ToString();
+
+            string shour = hour.ToString();
 
             string d = p_hour.ToString();
 
             string d2 = p_minute.ToString();
 
-            DisplayAlert(d,d2, "OK");
+            DisplayAlert(spd,shour, "OK");
 
             //int d3 = int.Parse(d);
             
