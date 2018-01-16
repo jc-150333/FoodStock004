@@ -94,6 +94,8 @@ namespace FoodStock01
             minute = TPicker.Time.Minutes;
             //p_minute = new DateTime(TPicker.Time.Minutes);
 
+            TimeModel.UpdateTime(TPicker.Time.Hours, TPicker.Time.Minutes);
+
             string spd = sp.ToString();
 
             //string shour = hour.ToString();
@@ -104,7 +106,7 @@ namespace FoodStock01
 
             //string d2 = p_minute.ToString();
 
-            TimeModel.UpdateTime(hour, minute);
+            
 
             DisplayAlert("通知時間",spd, "OK");
 

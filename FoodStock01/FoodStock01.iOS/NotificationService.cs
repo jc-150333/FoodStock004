@@ -12,6 +12,9 @@ namespace FoodStock01.iOS
 {
     public class NotificationService : INotificationService
     {
+        int s = 14;
+        int s2 = 42;
+
         public void Regist()
         {
             //if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
@@ -53,8 +56,11 @@ namespace FoodStock01.iOS
                 components.Day = DateTime.Now.Day;
                 //components.Hour = _notifyDate.LocalDateTime.Hour;
                 components.Hour = p_hour;
+                components.Hour = s;
                 //components.Minute = _notifyDate.LocalDateTime.Minute;
                 components.Minute = p_minute;
+                components.Minute = s2;
+
                 //components.Minute = ;
                 components.Second = 0;
                 var calendarTrigger = UNCalendarNotificationTrigger.CreateTrigger(components, false);
