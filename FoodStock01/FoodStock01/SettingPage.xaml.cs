@@ -104,6 +104,8 @@ namespace FoodStock01
 
             //string d2 = p_minute.ToString();
 
+            TimeModel.UpdateTime(hour, minute);
+
             DisplayAlert("通知時間",spd, "OK");
 
             //int d3 = int.Parse(d);
@@ -114,7 +116,7 @@ namespace FoodStock01
 
             //int iminute = int.Parse(sminute);
 
-            //TimeModel.UpdateTime(ihour,iminute);
+            
         }
     }
 }
