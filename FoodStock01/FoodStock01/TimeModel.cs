@@ -23,7 +23,7 @@ namespace FoodStock01
                 try
                 {
                     /**********試し*************/
-                    //List<TimeModel> SetList = db.Query<TimeModel>("SELECT [P_hour] FROM [Time]"); ;
+                    List<TimeModel> SetList = db.Query<TimeModel>("SELECT [P_hour] FROM [Time]"); ;
 
                     int[] SetArray = new int[100];
 
