@@ -92,6 +92,27 @@ namespace FoodStock01
             }
         }
 
+        public static void InsertTime(int p_hour, int p_minute)
+        {
+            //データベースに接続する
+            using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
+            {
+                try
+                {
+                    //データベースにFoodテーブルを作成する
+                    db.CreateTable<TimeModel>();
+
+                    db.Insert(new TimeModel() { P_hour = p_hour, P_minute = p_minute });
+                    db.Commit();
+                }
+                catch (Exception e)
+                {
+                    db.Rollback();
+                    System.Diagnostics.Debug.WriteLine(e);
+                }
+            }
+        }
+
         /********************アップデートメソッド（2回目以降の通知設定）**********************/
         public static void UpdateTime(int p_hour, int p_minute)
         {

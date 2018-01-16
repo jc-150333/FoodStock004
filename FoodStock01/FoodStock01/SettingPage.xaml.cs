@@ -94,6 +94,8 @@ namespace FoodStock01
             minute = TPicker.Time.Minutes;
             //p_minute = new DateTime(TPicker.Time.Minutes);
 
+            TimeModel.InsertTime(0, 0);
+
             TimeModel.UpdateTime(TPicker.Time.Hours, TPicker.Time.Minutes);
 
             string spd = sp.ToString();
