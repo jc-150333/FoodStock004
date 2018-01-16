@@ -98,17 +98,17 @@ namespace FoodStock01
 
             string spd = sp.ToString();
 
-            //string shour = hour.ToString();
+            string shour = hour.ToString();
 
-            //string sminute = minute.ToString();
+            string sminute = minute.ToString();
 
             //string d = p_hour.ToString();
 
             //string d2 = p_minute.ToString();
 
-            
+            DisplayAlert(shour, sminute, "OK");
 
-            DisplayAlert("通知時間",spd, "OK");
+            //DisplayAlert("通知時間",spd, "OK");
 
             //int d3 = int.Parse(d);
 

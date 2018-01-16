@@ -56,10 +56,10 @@ namespace FoodStock01.iOS
                 components.Day = DateTime.Now.Day;
                 //components.Hour = _notifyDate.LocalDateTime.Hour;
                 components.Hour = p_hour;
-                components.Hour = s;
+                //components.Hour = s;
                 //components.Minute = _notifyDate.LocalDateTime.Minute;
                 components.Minute = p_minute;
-                components.Minute = s2;
+                //components.Minute = s2;
 
                 //components.Minute = ;
                 components.Second = 0;
