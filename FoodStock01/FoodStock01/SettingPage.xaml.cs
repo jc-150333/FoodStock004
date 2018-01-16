@@ -91,24 +91,30 @@ namespace FoodStock01
 
             //hour = TPicker.Time.Hours;
 
-            //minute = TPicker.Time.Minutes;
+            minute = TPicker.Time.Minutes;
             //p_minute = new DateTime(TPicker.Time.Minutes);
 
-            string spd = sp.ToString();
+            string spd = sp.ToString("HH:mm");
 
             string shour = hour.ToString();
 
-            string d = p_hour.ToString();
+            string sminute = minute.ToString();
 
-            string d2 = p_minute.ToString();
+            //string d = p_hour.ToString();
 
-            DisplayAlert(spd,shour, "OK");
+            //string d2 = p_minute.ToString();
+
+            DisplayAlert("通知時間",spd, "OK");
 
             //int d3 = int.Parse(d);
-            
+
             //int d4 = int.Parse(d2);
 
-            //TimeModel.UpdateTime(d3,d4);
+            int ihour = int.Parse(shour);
+
+            int iminute = int.Parse(sminute);
+
+            TimeModel.UpdateTime(ihour,iminute);
         }
     }
 }
