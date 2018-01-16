@@ -110,9 +110,9 @@ namespace FoodStock01
 
             //int d4 = int.Parse(d2);
 
-            int ihour = int.Parse(shour);
+            //int ihour = int.Parse(shour);
 
-            int iminute = int.Parse(sminute);
+            //int iminute = int.Parse(sminute);
 
             //TimeModel.UpdateTime(ihour,iminute);
         }
