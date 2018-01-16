@@ -114,7 +114,7 @@ namespace FoodStock01
 
             int iminute = int.Parse(sminute);
 
-            TimeModel.UpdateTime(ihour,iminute);
+            //TimeModel.UpdateTime(ihour,iminute);
         }
     }
 }
