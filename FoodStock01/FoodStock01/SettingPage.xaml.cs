@@ -120,5 +120,14 @@ namespace FoodStock01
 
             
         }
+
+        private void Kakunin_Button_Clicked(object sender, EventArgs e)
+        {
+            int s = TimeModel.SelectHour();
+
+            string ss = s.ToString();
+
+            DisplayAlert(ss, "", "OK");
+        }
     }
 }

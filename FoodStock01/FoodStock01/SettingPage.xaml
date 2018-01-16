@@ -79,10 +79,15 @@
                             IsEnabled="True"
                             PropertyChanged="TPicker_PropertyChanged"/>
 
-                <Button Text="通知時間を保存" 
+            <Button Text="通知時間を保存" 
                         VerticalOptions="Center"
                         x:Name="Time_Button"
                         Clicked="Time_Button_Clicked"/>
+
+            <Button Text="確認" 
+                        VerticalOptions="Center"
+                        x:Name="Kakunin_Button"
+                        Clicked="Kakunin_Button_Clicked"/>
 
         </StackLayout>
     </ContentPage.Content>
