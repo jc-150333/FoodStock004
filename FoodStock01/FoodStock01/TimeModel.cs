@@ -22,27 +22,26 @@ namespace FoodStock01
             {
                 try
                 {
-                    //データベースに指定したSQLを発行
-                    
-                    List<TimeModel> SetHour = db.Query<TimeModel>("SELECT [P_hour] FROM [Time]"); ;
+                    /**********試し*************/
+                    List<TimeModel> SetList = db.Query<TimeModel>("SELECT [P_hour] FROM [Time]"); ;
 
-                    int[] SetH = new int[100];
+                    int[] SetArray = new int[100];
 
-                    int al = 1;
+                    int alert = 1;
 
                     int i = 0;
 
-                    foreach (TimeModel stm in SetHour)
+                    foreach (TimeModel stm in SetList)
                     {
                         //SetArray[i++] = stm.Set_alert;
-                        SetH[i] = stm.P_hour;
+                        SetArray[i] = stm.P_hour;
                         i++;
                     }
 
-                    al = SetH[0];
+                    alert = SetArray[0];
 
                     //データベースに指定したSQLを発行
-                    return al;
+                    return alert;
 
                 }
                 catch (Exception e)
