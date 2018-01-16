@@ -20,8 +20,8 @@ namespace FoodStock01
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
-                try
-                {
+                //try
+                //{
                     /**********試し*************/
                     List<TimeModel> SetList = db.Query<TimeModel>("SELECT [P_hour] FROM [Time]"); ;
 
@@ -43,13 +43,13 @@ namespace FoodStock01
                     //データベースに指定したSQLを発行
                     return alert;
 
-                }
-                catch (Exception e)
-                {
+               // }
+               // catch (Exception e)
+               // {
 
-                    System.Diagnostics.Debug.WriteLine(e);
-                    return 999;
-                }
+                   // System.Diagnostics.Debug.WriteLine(e);
+                   // return 999;
+               // }
             }
         }
 
