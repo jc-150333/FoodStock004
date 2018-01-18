@@ -55,7 +55,7 @@ namespace FoodStock01.iOS
                 //日時を指定する場合は以下の情報を付与
                 NSDateComponents components = new NSDateComponents();
 
-                components.Calendar = NSMinuteCalendarUnit;
+                components.Calendar = NSCalendar.NSMinuteCalendarUnit;
                 components.TimeZone = NSTimeZone.DefaultTimeZone;
                 components.Year = DateTime.Now.Year;
                 components.Month = DateTime.Now.Month;
