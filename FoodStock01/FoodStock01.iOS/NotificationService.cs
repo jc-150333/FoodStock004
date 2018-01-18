@@ -71,13 +71,13 @@ namespace FoodStock01.iOS
 
                 //components.Minute = ;
                 components.Second = 0;
-                var calendarTrigger = UNCalendarNotificationTrigger.CreateTrigger(components, false);
+                var calendarTrigger = UNCalendarNotificationTrigger.CreateTrigger(components, true);
 
                 var requestID = "notifyKey";
                 content.UserInfo = NSDictionary.FromObjectAndKey(new NSString("notifyValue"), new NSString("notifyKey"));
-                var request = UNNotificationRequest.FromIdentifier(requestID, content, trigger);
+                //var request = UNNotificationRequest.FromIdentifier(requestID, content, trigger);
 
-                //var request = UNNotificationRequest.FromIdentifier(requestID, content, calendarTrigger);
+                var request = UNNotificationRequest.FromIdentifier(requestID, content, calendarTrigger);
 
                 UNUserNotificationCenter.Current.Delegate = new LocalNotificationCenterDelegate();
 
