@@ -48,8 +48,6 @@ namespace FoodStock01.iOS
                 content.Body = body;
                 content.Sound = UNNotificationSound.Default;
 
-                
-
                 var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(5, false);
 
 
@@ -71,7 +69,7 @@ namespace FoodStock01.iOS
 
                 //components.Minute = ;
                 components.Second = 0;
-                var calendarTrigger = UNCalendarNotificationTrigger.CreateTrigger(components, false);
+                var calendarTrigger = UNCalendarNotificationTrigger.CreateTrigger(components, true);
 
                 var requestID = "notifyKey";
                 content.UserInfo = NSDictionary.FromObjectAndKey(new NSString("notifyValue"), new NSString("notifyKey"));
