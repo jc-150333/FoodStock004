@@ -50,7 +50,7 @@ namespace FoodStock01.iOS
 
                 
 
-                var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(5, true);
+                var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(5, false);
 
 
 
@@ -99,9 +99,9 @@ namespace FoodStock01.iOS
         {
             UIApplication.SharedApplication.InvokeOnMainThread(delegate
             {
-                UNUserNotificationCenter.Current.RemovePendingNotificationRequests(new string[] { "notifyKey" });
+                //UNUserNotificationCenter.Current.RemovePendingNotificationRequests(new string[] { "notifyKey" });
 
-                //UNUserNotificationCenter.Current.RemoveAllDeliveredNotifications();
+                UNUserNotificationCenter.Current.RemoveAllDeliveredNotifications();
             });
         }
 

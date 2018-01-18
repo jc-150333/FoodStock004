@@ -85,6 +85,8 @@ namespace FoodStock01
         {
             //p_hour = new DateTime(TPicker.Time.Hours);
 
+            DependencyService.Get<INotificationService>().Off();
+
             sp = TPicker.Time;
 
             hour = TPicker.Time.Hours;

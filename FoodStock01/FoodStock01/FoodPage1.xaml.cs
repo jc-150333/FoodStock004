@@ -50,7 +50,7 @@ namespace FoodStock01
             int Hour = TimeModel.SelectHour();
             int Minute = TimeModel.SelectMinute();
 
-            DependencyService.Get<INotificationService>().On("タイトルテスト", "スブタイトル", "本文テスト",Hour,Minute);
+            //DependencyService.Get<INotificationService>().On("タイトルテスト", "スブタイトル", "本文テスト",Hour,Minute);
         }
 
         void ChackBoxChanged(object sender, bool isChecked)
