@@ -48,6 +48,8 @@ namespace FoodStock01.iOS
                 content.Body = body;
                 content.Sound = UNNotificationSound.Default;
 
+                content.RepeatInterval = NSCalendarUnit.Minute;
+
                 var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(5, false);
 
 
@@ -55,7 +57,7 @@ namespace FoodStock01.iOS
                 //日時を指定する場合は以下の情報を付与
                 NSDateComponents components = new NSDateComponents();
 
-                components.RepeatInterval = NSCalendarUnit.Minute;
+                //components.RepeatInterval = NSCalendarUnit.Minute;
                 components.TimeZone = NSTimeZone.DefaultTimeZone;
                 components.Year = DateTime.Now.Year;
                 components.Month = DateTime.Now.Month;
