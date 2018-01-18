@@ -43,8 +43,6 @@ namespace FoodStock01
             NP_hour = p_hour;
             NP_minute = p_minute;
         }
-
-        
     }
 }
 
@@ -122,7 +120,6 @@ public static int SelectMinute()
         }
         catch (Exception e)
         {
-
             System.Diagnostics.Debug.WriteLine(e);
             return 999;
         }
