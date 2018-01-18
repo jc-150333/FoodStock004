@@ -50,9 +50,14 @@ namespace FoodStock01.iOS
 
                 var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(5, false);
 
+
+
                 //日時を指定する場合は以下の情報を付与
-                NSDateComponents components = new NSDateComponents();
-                components.CalendarUnit = NSCalendarUnit.NSMinuteCalendarUnit;
+                //NSDateComponents components = new NSDateComponents();
+
+                NSCalendarUnit components = new NSCalendarUnit();
+
+                //components.CalendarUnit = NSCalendarUnit.NSMinuteCalendarUnit;
                 components.TimeZone = NSTimeZone.DefaultTimeZone;
                 components.Year = DateTime.Now.Year;
                 components.Month = DateTime.Now.Month;
