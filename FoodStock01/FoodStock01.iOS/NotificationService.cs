@@ -40,6 +40,8 @@ namespace FoodStock01.iOS
         {
             UIApplication.SharedApplication.InvokeOnMainThread(delegate
             {
+
+
                 var content = new UNMutableNotificationContent();
                 content.Title = title;
                 content.Subtitle = subtitle;
@@ -50,6 +52,7 @@ namespace FoodStock01.iOS
 
                 //日時を指定する場合は以下の情報を付与
                 NSDateComponents components = new NSDateComponents();
+                components.CalendarUnit = NSMinuteCalendarUnit;
                 components.TimeZone = NSTimeZone.DefaultTimeZone;
                 components.Year = DateTime.Now.Year;
                 components.Month = DateTime.Now.Month;
