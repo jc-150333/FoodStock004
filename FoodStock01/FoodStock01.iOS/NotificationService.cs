@@ -48,9 +48,9 @@ namespace FoodStock01.iOS
                 content.Body = body;
                 content.Sound = UNNotificationSound.Default;
 
-                content.RepeatInterval = NSCalendarUnit.Minute;
+                
 
-                var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(5, false);
+                var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(5, true);
 
 
 
@@ -75,9 +75,9 @@ namespace FoodStock01.iOS
 
                 var requestID = "notifyKey";
                 content.UserInfo = NSDictionary.FromObjectAndKey(new NSString("notifyValue"), new NSString("notifyKey"));
-                //var request = UNNotificationRequest.FromIdentifier(requestID, content, trigger);
+                var request = UNNotificationRequest.FromIdentifier(requestID, content, trigger);
 
-                var request = UNNotificationRequest.FromIdentifier(requestID, content, calendarTrigger);
+                //var request = UNNotificationRequest.FromIdentifier(requestID, content, calendarTrigger);
 
                 UNUserNotificationCenter.Current.Delegate = new LocalNotificationCenterDelegate();
 
